@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DetailsViewController: UIViewController {
+final class DetailsViewController: UIViewController {
     // MARK: - Public Properties
     var person: Person!
     
@@ -18,6 +18,7 @@ class DetailsViewController: UIViewController {
     // MARK: - Overrides Methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         title = person.fullName
         phoneLabel.text = person.phoneNumber
         emailLabel.text = person.email

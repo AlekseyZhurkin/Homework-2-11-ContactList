@@ -61,6 +61,7 @@ final class DataStore {
         "email10@gmail.com"
     ]
     
+    // MARK: - Initializers
     private init() {} // Запрещаем создание других экземпляров
 }
 

@@ -7,16 +7,11 @@
 
 import UIKit
 
-final class ViewController: UITableViewController {
+final class MainViewController: UITableViewController {
     // MARK: - Public Properties
-    let contacts = Person.getPersons(10)
+    var contacts: [Person]!
     
     // MARK: - Overrides Methods
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let indexPath = tableView.indexPathForSelectedRow else { return }
         let detailsVC = segue.destination as? DetailsViewController
@@ -25,7 +20,7 @@ final class ViewController: UITableViewController {
 }
 
 // MARK: - UITableViewDataSource
-extension ViewController {
+extension MainViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         contacts.count
     }
